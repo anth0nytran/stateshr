@@ -422,9 +422,18 @@ export default function LeadsPage() {
               disabled={busy !== null} 
               size="sm" 
               className="h-9 gap-2 bg-[#0F9D58] px-3 font-medium text-white hover:bg-[#0F9D58]/90 flex-1 sm:flex-none"
+              title="Sync leads to Google Sheets"
+              aria-label="Sync leads to Google Sheets"
             >
-              {busy === "sync" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sheet className="h-4 w-4" />}
-              <span className="hidden sm:inline">Sync Sheets</span>
+              <span className="hidden sm:inline-flex items-center gap-2">
+                {busy === "sync" ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <Sheet className="h-4 w-4" />
+                )}
+                Sync Sheets
+              </span>
+              <span className="sm:hidden">{busy === "sync" ? "Syncing…" : "Sync to Sheets"}</span>
             </Button>
           </div>
         </div>
