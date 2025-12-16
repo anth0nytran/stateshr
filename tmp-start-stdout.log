@@ -1,0 +1,10 @@
+
+> stateshr_demo@0.1.0 start
+> next start -p 3010
+
+   ▲ Next.js 16.0.10
+   - Local:         http://localhost:3010
+   - Network:       http://208.124.64.24:3010
+
+ ✓ Starting...
+ ✓ Ready in 434ms
